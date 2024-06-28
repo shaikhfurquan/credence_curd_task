@@ -1,0 +1,15 @@
+
+ADD MOVIE
+    POST  ==> localhost:4000/api/v1/movie/add
+
+
+GET ALL MOVIES
+    GET ==> localhost:4000/api/v1/movie/get-all
+
+
+UPDATE MOVIE
+    PUT ==> localhost:4000/api/v1/movie/update/667eef3d3773e207cf4baec8
+
+
+DELETE MOVIE    
+    DELETE ==> localhost:4000/api/v1/movie/delete/667eef3d3773e207cf4baec8
