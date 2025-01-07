@@ -1,6 +1,6 @@
 # Movie API Documentation
 
-This section provides details about the Movie APIs for the Movie Booking application. Below are the available endpoints for movie management.
+This section provides details about the Movie APIs for the Movie Booing application. Below are the available endpoints for movie management.
 
 ## API Description
 
@@ -32,6 +32,7 @@ To improve performance, the API utilizes Redis for caching movie data. The cachi
 
 ### 1. Add Movie
 - **Endpoint:** `POST http://localhost:5000/api/v1/movie/add`
+- **Description:** Adds a new movie to the database.
 - **Request Body:**
     ```json
     {
@@ -60,13 +61,14 @@ To improve performance, the API utilizes Redis for caching movie data. The cachi
     --header 'Content-Type: application/json' \
     --data-raw '{
         "name": "End Game",
-        "img": "End_Game.png",
+        "img": "End Game.png",
         "summary": "new movie"
     }'
     ```
 
 ### 2. Get All Movies
 - **Endpoint:** `GET http://localhost:5000/api/v1/movie/get-all`
+- **Description:** Retrieves all movies from the database.
 - **Response:**
     ```json
     {
@@ -92,6 +94,7 @@ To improve performance, the API utilizes Redis for caching movie data. The cachi
 
 ### 3. Update Movie
 - **Endpoint:** `PUT http://localhost:5000/api/v1/movie/update/{movieId}`
+- **Description:** Updates the details of an existing movie.
 - **Request Body:**
     ```json
     {
@@ -126,11 +129,16 @@ To improve performance, the API utilizes Redis for caching movie data. The cachi
     ```
 
 ### 4. Delete Movie
-- **Endpoint:** `DELETE http://localhost:5000/api/v1/movie/delete/{movieId}`
+- **Endpoint:** `DELETE http://localhost:5000/api/v1 /movie/delete/{movieId}`
+- **Description:** Deletes a movie from the database.
 - **Response:**
     ```json
     {
         "success": true,
-        "response": "Movie deleted successfully"
+        "response": "Movie deleted successfully."
     }
-   
+    ```
+- **CURL Example:**
+    ```bash
+    curl --location --request DELETE 'http://localhost:5000/api/v1/movie/delete/667eef3d3773e207cf4baec8'
+    ```
